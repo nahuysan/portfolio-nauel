@@ -1,0 +1,3 @@
+Pillow==10.2.0
+requests==2.31.0</content>
+<parameter name="filePath">c:\Users\mnahu\Desktop\Caja\portfolio\requirements.txt
