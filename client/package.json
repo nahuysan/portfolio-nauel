@@ -6,7 +6,7 @@
   "scripts": {
     "sync-photos": "..\\scripts\\venv\\Scripts\\python ..\\scripts\\sync_photos.py",
     "dev": "npm run sync-photos && vite",
-    "build": "npm run sync-photos && tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
