@@ -8,7 +8,6 @@ export function Contact() {
   const { lang } = useLanguage();
   const t = translations[lang as keyof typeof translations].contact;
 
-  // Estados para el manejo del formulario y feedback técnico
   const [isSending, setIsSending] = useState(false);
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [formData, setFormData] = useState({
@@ -23,18 +22,15 @@ export function Contact() {
     setStatus('idle');
 
     try {
-      // Conexión con tu backend de Node.js
       const response = await fetch("http://localhost:3001/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
         setStatus('success');
-        setFormData({ name: "", email: "", message: "" }); // Reset del formulario
+        setFormData({ name: "", email: "", message: "" });
       } else {
         setStatus('error');
       }
@@ -43,15 +39,12 @@ export function Contact() {
       setStatus('error');
     } finally {
       setIsSending(false);
-      // El mensaje desaparece suavemente tras 5 segundos gracias a AnimatePresence
       setTimeout(() => setStatus('idle'), 5000);
     }
   };
 
   return (
     <section id="contact" className="py-24 bg-background text-foreground relative overflow-hidden">
-      {/* Glow estético con el Tech Green característico de tu marca */}
-      <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
@@ -64,11 +57,13 @@ export function Contact() {
         </div>
 
         <div className="max-w-4xl mx-auto grid lg:grid-cols-5 gap-12">
-          {/* Columna de Información de Contacto */}
-          <div className="lg:col-span-2 space-y-6">
+          
+          {/* Columna de Info: Ahora con flex-col y centrado en mobile */}
+          <div className="lg:col-span-2 space-y-6 flex flex-col items-center lg:items-stretch">
+            
             <a
               href="mailto:mnahuelsanchez94@gmail.com"
-              className="group flex items-center gap-4 p-6 bg-card border border-border rounded-2xl hover:border-primary/50 transition-all duration-300 shadow-xl"
+              className="w-full group flex flex-col items-center text-center lg:flex-row lg:items-center lg:text-left gap-4 p-6 bg-card border border-border rounded-2xl hover:border-primary/50 transition-all duration-300 shadow-xl"
             >
               <div className="p-3 bg-primary/10 rounded-xl text-primary group-hover:scale-110 transition-transform">
                 <Mail size={24} />
@@ -79,7 +74,7 @@ export function Contact() {
               </div>
             </a>
 
-            <div className="flex items-center gap-4 p-6 bg-card border border-border rounded-2xl shadow-xl">
+            <div className="w-full flex flex-col items-center text-center lg:flex-row lg:items-center lg:text-left gap-4 p-6 bg-card border border-border rounded-2xl shadow-xl">
               <div className="p-3 bg-primary/10 rounded-xl text-primary">
                 <span className="text-2xl">📍</span>
               </div>
@@ -89,8 +84,8 @@ export function Contact() {
               </div>
             </div>
 
-            {/* Redes Sociales con estilo minimalista y serio */}
-            <div className="flex gap-4 pt-4">
+            {/* Redes Sociales: Centradas en mobile (justify-center) */}
+            <div className="flex justify-center lg:justify-start gap-4 pt-4 w-full">
               {[
                 { icon: <Github size={20} />, url: "https://github.com/NahuySan" },
                 { icon: <Linkedin size={20} />, url: "https://linkedin.com/in/nahuelsan" },
@@ -109,61 +104,58 @@ export function Contact() {
             </div>
           </div>
 
-          {/* Formulario de Contacto Fullstack */}
-          <div className="lg:col-span-3 bg-card border border-border rounded-4x1 p-8 backdrop-blur-sm shadow-2xl">
+          {/* Formulario: Centrado por el mx-auto del container */}
+          <div className="lg:col-span-3 bg-card border border-border rounded-4xl p-8 backdrop-blur-sm shadow-2xl">
             <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid md:grid-cols-2 gap-6">
-              {/* Campo Nombre */}
-              <div className="space-y-2">
-                <label htmlFor="name" className="text-xs font-bold text-muted-foreground ml-1 uppercase tracking-wider">
-                  {t.formName}
-                </label>
-                <input
-                  id="name"
-                  name="name" // Ayuda al autocompletado del navegador
-                  required
-                  type="text"
-                  value={formData.name}
-                  onChange={(e) => setFormData({...formData, name: e.target.value})}
-                  className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:ring-2 focus:ring-primary/50 text-foreground"
-                  placeholder={t.formNamePlaceholder}
-                />
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-2 text-left">
+                  <label htmlFor="name" className="text-xs font-bold text-muted-foreground uppercase tracking-wider block ml-1">
+                    {t.formName}
+                  </label>
+                  <input
+                    id="name"
+                    name="name"
+                    required
+                    type="text"
+                    value={formData.name}
+                    onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:ring-2 focus:ring-primary/50 text-foreground"
+                    placeholder={t.formNamePlaceholder}
+                  />
+                </div>
+
+                <div className="space-y-2 text-left">
+                  <label htmlFor="email" className="text-xs font-bold text-muted-foreground uppercase tracking-wider block ml-1">
+                    {t.emailLabel}
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    required
+                    type="email"
+                    value={formData.email}
+                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:ring-2 focus:ring-primary/50 text-foreground"
+                    placeholder={t.formEmailPlaceholder}
+                  />
+                </div>
               </div>
 
-              {/* Campo Email */}
-              <div className="space-y-2">
-                <label htmlFor="email" className="text-xs font-bold text-muted-foreground ml-1 uppercase tracking-wider">
-                  {t.emailLabel}
+              <div className="space-y-2 text-left">
+                <label htmlFor="message" className="text-xs font-bold text-muted-foreground uppercase tracking-wider block ml-1">
+                  {t.formMessage}
                 </label>
-                <input
-                  id="email"
-                  name="email"
+                <textarea
+                  id="message"
+                  name="message"
                   required
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) => setFormData({...formData, email: e.target.value})}
+                  rows={4}
+                  value={formData.message}
+                  onChange={(e) => setFormData({...formData, message: e.target.value})}
                   className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:ring-2 focus:ring-primary/50 text-foreground"
-                  placeholder={t.formEmailPlaceholder}
+                  placeholder={t.formMessagePlaceholder}
                 />
               </div>
-            </div>
-
-            {/* Campo Mensaje */}
-            <div className="space-y-2">
-              <label htmlFor="message" className="text-xs font-bold text-muted-foreground ml-1 uppercase tracking-wider">
-                {t.formMessage}
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                rows={4}
-                value={formData.message}
-                onChange={(e) => setFormData({...formData, message: e.target.value})}
-                className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:ring-2 focus:ring-primary/50 text-foreground"
-                placeholder={t.formMessagePlaceholder}
-              />
-            </div>
 
               <button
                 type="submit"
@@ -180,7 +172,6 @@ export function Contact() {
                 )}
               </button>
 
-              {/* Feedback dinámico con AnimatePresence para transiciones fluidas */}
               <AnimatePresence mode="wait">
                 {status === 'success' && (
                   <motion.div 

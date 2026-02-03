@@ -14,15 +14,15 @@ export const translations = {
       skills: [
         {
           title: "Desarrollo Web",
-          description: "Desarrollo con React, PHP y WordPress. Como técnico en computación, busco siempre un código riguroso y eficiente."
+          description: "Desarrollo con React, WordPress, entre otras tecnologías. Buscando siempre un código riguroso y eficiente."
         },
         {
           title: "Automatización",
-          description: "Optimizo procesos mediante Python y scripting, integrando mis conocimientos en robótica y sistemas electrónicos."
+          description: "Transformo tareas manuales en procesos autónomos eficientes mediante scripting de automatización usando Python."
         },
         {
           title: "Fotografía & Diseño",
-          description: "Capturo momentos con una mirada artística y técnica, diseñando interfaces que priorizan la estética y la experiencia."
+          description: "Capturo momentos con una mirada artística y técnica, y diseño interfaces que priorizan la estética y la experiencia."
         }
       ]
     },
@@ -32,7 +32,7 @@ export const translations = {
       repo: "REPOSITORIO",
       items: {
         corchazo: {
-          title: "Corchazo Band Site",
+          title: "Corchazo Sitio de Banda",
           description: "Web oficial de la banda de hard rock. Todo el contenido fotográfico es de mi autoría."
         },
         inBloom: {
@@ -68,14 +68,20 @@ export const translations = {
       linksTitle: "Navegación"
     },
     hero: {
-      titlePart1: "Desarrollador, ",
-      titlePart2: "Diseñador ",
+      titlePart1: "Desarrollador",
+      titlePart2: "Web ",
       titlePart3: "Fotógrafo",
       // NUEVO TEXTO:
       subtitle: "Transformando ideas complejas en interfaces simples, funcionales y visualmente potentes.",
       btnProjects: "Ver Proyectos",
       btnContact: "Contactar"
     },
+    photography: {
+      title: "Perspectiva ",
+      titleHighlight: "Visual",
+      subtitle: "Las imágenes son herramientas de comunicación poderosas, y capturar la realidad a través de mi lente es lo que define mi voz como fotógrafo. Éste es un resumen conciso de lo que me gustaría expresar. ¡Espero que lo disfrutes!",
+      viewGallery: "Ver Galería"
+    }
   },
   en: {
     nav: {
@@ -92,15 +98,15 @@ export const translations = {
       skills: [
         {
           title: "Web Development",
-          description: "Development with React, PHP, and WordPress. As a computer technician, I always strive for rigorous and efficient code."
+          description: "Development using React, WordPress, among other technologies. Always striving for rigorous and efficient code."
         },
         {
           title: "Automation",
-          description: "I optimize processes through Python and scripting, integrating my knowledge in robotics and electronic systems."
+          description: "I transform manual tasks into autonomous processes through automation scripting using Python."
         },
         {
           title: "Photography & Design",
-          description: "I capture moments with an artistic and technical eye, designing interfaces that prioritize aesthetics and experience."
+          description: "I capture moments with an artistic and technical eye, and design interfaces that prioritize aesthetics and experience."
         }
       ]
     },
@@ -129,7 +135,7 @@ export const translations = {
     },
     contact: {
       title: "Contact",
-      subtitle: "Have a project in mind or looking to collaborate? I'd love to hear from you.",
+      subtitle: "Have a project in mind or looking to collaborate? I'd like to hear from you.",
       emailLabel: "Email",
       locationLabel: "Location",
       locationValue: "Jardín América, Misiones",
@@ -146,14 +152,20 @@ export const translations = {
       linksTitle: "Navigation"
     },
     hero: {
-      titlePart1: "Developer, ",
-      titlePart2: "Designer ",
+      titlePart1: "Web",
+      titlePart2: "Developer",
       titlePart3: "Photographer",
       // NUEVO TEXTO:
       subtitle: "Transforming complex ideas into simple, functional, and visually powerful interfaces.",
       btnProjects: "View Projects",
       btnContact: "Contact Me"
     },
+    photography: {
+      title: "Visual ",
+      titleHighlight: "Perspective",
+      subtitle: "Images are powerful communication tools, and capturing reality through my lens is what defines my voice as a photographer. This is a concise summary of what I'd like to express. I hope you enjoy it!",
+      viewGallery: "View Gallery"
+    }
 
   }
 };

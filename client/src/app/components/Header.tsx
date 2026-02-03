@@ -36,7 +36,7 @@ export function Header() {
       }`}
     >
       <nav className="container mx-auto px-6 flex items-center justify-between">
-        {/* Logo con tu Verde Tech */}
+        {/* Logo */}
         <div 
           className="text-xl font-bold tracking-tighter cursor-pointer text-foreground"
           onClick={() => scrollToSection("home")}
@@ -44,8 +44,8 @@ export function Header() {
           NAHUEL<span className="text-primary">.</span>
         </div>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        {/* --- DESKTOP NAVIGATION (Ahora desde 1024px en adelante) --- */}
+        <div className="hidden lg:flex items-center gap-8">
           {sections.map((section) => (
             <button
               key={section}
@@ -56,7 +56,7 @@ export function Header() {
             </button>
           ))}
 
-          {/* Botón Switch de Idioma Desktop */}
+          {/* Botón Idioma Desktop */}
           <button
             onClick={toggleLang}
             className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-border hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 group"
@@ -68,19 +68,33 @@ export function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-foreground"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* --- ACTIONS PARA MÓVIL Y TABLET (Hasta 1023px) --- */}
+        <div className="flex lg:hidden items-center gap-5">
+          {/* Botón de Idioma: Visible en Mobile y Tablet */}
+          <button
+            onClick={toggleLang}
+            className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-border bg-background/50 backdrop-blur-sm active:scale-90 transition-all"
+          >
+            <Languages size={16} className="text-primary" />
+            <span className="text-xs font-bold text-foreground">
+              {lang === 'es' ? 'EN' : 'ES'}
+            </span>
+          </button>
+
+          {/* Botón Menú Hamburguesa */}
+          <button
+            className="text-foreground active:scale-90 transition-transform"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </nav>
 
-      {/* Mobile Navigation */}
+      {/* --- DROPDOWN PARA MÓVIL Y TABLET --- */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-xl transition-all duration-300 border-b border-border ${
-          isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        className={`lg:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-xl transition-all duration-300 border-b border-border ${
+          isMenuOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"
         }`}
       >
         <div className="flex flex-col gap-4 p-6">
@@ -88,27 +102,11 @@ export function Header() {
             <button
               key={section}
               onClick={() => scrollToSection(section)}
-              className="text-left text-lg font-medium text-foreground/90 hover:text-primary py-2 border-b border-border/50"
+              className="text-left text-lg font-medium text-foreground/90 hover:text-primary py-3 border-b border-border/50 transition-colors"
             >
               {t[section as keyof typeof t]}
             </button>
           ))}
-          
-          {/* Switch de Idioma Mobile */}
-          <button
-            onClick={toggleLang}
-            className="flex items-center justify-between mt-2 p-4 rounded-xl bg-accent/10 border border-border"
-          >
-            <div className="flex items-center gap-3">
-              <Languages size={20} className="text-primary" />
-              <span className="text-foreground font-medium">
-                {lang === 'es' ? 'English Version' : 'Versión en Español'}
-              </span>
-            </div>
-            <span className="text-xs font-bold text-primary uppercase tracking-widest">
-              {lang === 'es' ? 'EN' : 'ES'}
-            </span>
-          </button>
         </div>
       </div>
     </header>
