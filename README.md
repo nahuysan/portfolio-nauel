@@ -1,91 +1,164 @@
+# Nahuel Sanchez - Portfolio
 
-Portfolio Personal
-Un sitio web de portfolio moderno y profesional construido con React, TypeScript y Vite. Incluye una API robusta para el manejo de contactos y herramientas de automatización en Python.
+Este repositorio contiene el código fuente completo de mi portfolio personal, un proyecto que unifica mi entusiasmo por el desarollo de software, el diseño de interfaces y la fotografía.
 
-Características
-Diseño Responsivo: Adaptado para cualquier dispositivo.
+La aplicación está diseñada como un monorepo que separa las responsabilidades del frontend (cliente), backend (API para formulario de contacto) y los scripts de automatización.
 
-Animaciones Suaves: Implementación de Framer Motion.
+[**(Miralo acá)**](https://nahuelsanchez.com) 
 
-Galería Dinámica: Sección de fotografía con procesamiento automático de imágenes.
+---
 
-Seguridad en Backend: Blindado con Rate Limiting y Security Headers.
+## ✨ Funcionalidades
 
-Internacionalización: Soporte bilingüe para traducciones.
+-   **Sitio Bilingüe (ES/EN):** Soporte completo para español e inglés.
+-   **Galería de Fotos Automatizada:** Un script de Python procesa y optimiza automáticamente las imágenes de la galería, generando un índice JSON que el frontend consume.
+-   **Hero Interactivo 3D:** Una escena 3D creada con `react-three-fiber` y `drei` como banner principal.
+-   **Diseño Responsivo:** Interfaz moderna y adaptable a cualquier dispositivo, desarrollada con Tailwind CSS y animaciones de Framer Motion.
+-   **API Serverless para Contacto:** Un endpoint de API seguro (con rate limiting) desplegado en Vercel para gestionar el envío de correos desde el formulario de contacto.
+-   **Flujo de Trabajo Optimizado:** El script de sincronización de fotos se ejecuta automáticamente al iniciar el entorno de desarrollo o al construir el proyecto.
 
-Tecnologías Utilizadas
-Frontend
-React 19 & TypeScript.
+---
 
-Tailwind CSS & shadcn/ui.
+## 🛠️ Stack Tecnológico
 
-Framer Motion & Lucide React.
+| Área              | Tecnologías                                                                                             |
+| ----------------- | ------------------------------------------------------------------------------------------------------- |
+| **Frontend**      | React, Vite, TypeScript, Tailwind CSS, Framer Motion, React Three Fiber (Three.js)                      |
+| **Backend (API)** | Node.js, Express.js, Nodemailer, Helmet, Vercel Serverless Functions                                    |
+| **Scripts**       | Python, Pillow (PIL)                                                                                    |
+| **Deployment**    | Vercel                                                                                                  |
 
-Backend
-Node.js & Express.js.
+---
 
-Helmet: Asegura la aplicación configurando varios encabezados HTTP.
+## 📂 Estructura del Proyecto
 
-Express Rate Limit: Prevención de ataques DoS y fuerza bruta en el formulario de contacto.
+El proyecto está organizado como un monorepo con las siguientes carpetas principales:
 
-Nodemailer: Gestión de correos mediante SMTP seguro.
-
-Automatización
-Python 3.x: Procesamiento de imágenes (Pillow) y auditoría de API (Requests).
-
-Estructura del Proyecto
-
+```
 portfolio/
-├── api/                # Backend (Express API)
-│   ├── index.js        # Lógica del servidor y seguridad
-│   ├── vercel.json     # Configuración de despliegue
-│   └── .env            # Variables sensibles (No trackeado)
-├── client/             # Frontend (React + Vite)
-│   ├── src/            # Código fuente
-│   └── public/         # Assets estáticos y fotografía
-└── scripts/            # Herramientas de Automatización
-    ├── venv/           # Entorno virtual de Python
-    ├── requirements.txt # Dependencias (Pillow, Requests)
-    ├── sync_photos.py  # Script de optimización y sincronización
-    └── rate_limit_test.py # Script de auditoría de seguridad
+├── /api/         # Backend: Express API para el formulario de contacto
+├── /client/      # Frontend: Aplicación React (Vite)
+├── /scripts/     # Scripts de automatización (Python)
+└── README.md
+```
 
-Instalación y Configuración
-1. Clonar y Dependencias
+---
 
-git clone https://github.com/NahuySan/portfolio-nauel
+## 🚀 Cómo Correrlo Localmente
+
+Para levantar este proyecto en tu entorno local, vas a necesitar tener instalado **Node.js** (v18 o superior) y **Python** (v3.8 o superior).
+
+### 1. Clonar el Repositorio
+
+```bash
+git clone https://github.com/nahuel-sanchez/portfolio.git
 cd portfolio
+```
 
-# Instalar Frontend
-cd client && npm install
+### 2. Configurar el Backend (API)
 
-# Instalar Backend
-cd ../api && npm install
+El backend es necesario para que el formulario de contacto funcione.
 
-2. Configuración de Seguridad (Backend)
-Crea un archivo .env dentro de la carpeta /api:
+1.  **Navegar a la carpeta de la API e instalar dependencias:**
 
-EMAIL_USER=tu-email@gmail.com
-EMAIL_PASS=tu-clave-de-aplicacion-google
+    ```bash
+    cd api
+    npm install
+    ```
 
-3. Entorno de Automatización (Python)
+2.  **Crear el archivo de entorno:**
 
-cd scripts
-python -m venv venv
-.\venv\Scripts\activate  # Windows
-pip install -r requirements.txt
-    
- Uso en Desarrollo
-Backend: cd api && npm run dev (Corre en puerto 3001).
+    Crea un archivo `.env` en la carpeta `/api` y configúralo con tus credenciales de correo (se usa Gmail como proveedor por defecto en el código, pero podés adaptarlo).
 
-Frontend: cd client && npm run dev (Corre en puerto 5173).
+    ```env
+    # Credenciales para Nodemailer (Gmail)
+    EMAIL_USER=tu_correo@gmail.com
+    EMAIL_PASS=tu_contraseña_de_aplicacion
+    ```
 
-Sincronizar Fotos: cd client && npm run sync-photos (Requiere configuración en package.json).
+    > **Importante:** Si usas Gmail, necesitas generar una "Contraseña de Aplicación" desde la configuración de seguridad de tu cuenta de Google. No uses tu contraseña principal.
 
-API Endpoints
-POST /api/contact
-Envía mensajes desde el formulario. Cuenta con un límite de 5 peticiones cada 15 minutos por IP para evitar spam.
+3.  **Ejecutar el servidor de la API (opcional):**
 
-Licencia
+    El frontend se conectará a la API desplegada en producción por defecto. Si quieres probar la API localmente, puedes iniciarla con:
+
+    ```bash
+    npm run dev
+    ```
+
+    Y luego cambiar la URL del endpoint en el código del frontend.
+
+### 3. Configurar el Frontend (Cliente)
+
+1.  **Navegar a la carpeta del cliente e instalar dependencias:**
+
+    ```bash
+    cd ../client 
+    npm install
+    ```
+
+2.  **Configurar el entorno virtual de Python (primera vez):**
+
+    El script de fotos necesita dependencias de Python.
+
+    ```bash
+    cd ../scripts
+    python -m venv venv
+    source venv/bin/activate  # En Linux/macOS
+    # o
+    .\venv\Scripts\activate   # En Windows
+    pip install -r requirements.txt
+    ```
+
+3.  **Iniciar el entorno de desarrollo:**
+
+    Vuelve a la carpeta del cliente y ejecuta el comando `dev`. Esto ejecutará primero el script de Python para sincronizar las fotos y luego iniciará el servidor de Vite.
+
+    ```bash
+    cd ../client
+    npm run dev
+    ```
+
+¡Listo! La aplicación debería estar corriendo en `http://localhost:5173`.
+
+---
+
+## 📸 Flujo de Trabajo de Fotografía
+
+Para agregar nuevas fotos a la galería, el proceso es muy simple:
+
+1.  **Agrega tus imágenes:** Simplemente copia tus archivos de imagen (`.jpg`, `.png`) en la subcarpeta de la categoría que corresponda dentro de `client/public/photography/`. Si la categoría no existe, crea una nueva carpeta.
+
+    ```
+    client/public/photography/
+    ├── Arquitectura/
+    ├── Bichos/
+    ├── Naturaleza/
+    └── TuNuevaCategoria/
+        └── mi-nueva-foto.jpg
+    ```
+
+2.  **Ejecuta el servidor:** Al correr `npm run dev` (o `npm run build`), el script `scripts/sync_photos.py` hará lo siguiente automáticamente:
+    -   Detectará las nuevas imágenes.
+    -   Creará una versión optimizada en formato `.webp` si no existe.
+    -   Determinará la orientación de la imagen (vertical u horizontal).
+    -   Actualizará el archivo `client/src/data/photos.json` con la nueva información.
+
+El frontend leerá este JSON actualizado y mostrará tus nuevas fotos en la galería sin que tengas que hacer nada más.
+
+---
+
+## Deployment
+
+El proyecto está configurado para un despliegue sencillo en **Vercel**.
+
+-   El **frontend** (`/client`) se despliega como una aplicación de Vite.
+-   El **backend** (`/api`) se despliega como una Serverless Function de Node.js. Vercel detectará automáticamente el archivo `api/vercel.json` y configurará los builds y rutas necesarios.
+
+---
+
+## 📄 Licencia
+
 Este proyecto está bajo la Licencia MIT.
 
-🚀Freelance Web Dev & Photographer: Nahuel Sanchez.
+Nahuel Sánchez | Freelance Web Dev & Photographer | Jardín América, Misiones.
