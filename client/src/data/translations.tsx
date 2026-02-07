@@ -7,18 +7,26 @@ export const translations = {
       photography: "Fotografía",
       contact: "Contacto"
     },
+    hero: {
+      titlePart1: "Desarrollador",
+      titlePart2: "Web ",
+      titlePart3: "Fotógrafo",
+      subtitle: "Transformando ideas complejas en interfaces simples, funcionales y visualmente potentes.",
+      btnProjects: "Ver Proyectos",
+      btnContact: "Contactar"
+    },    
     about: {
       title: "Sobre ",
       titleHighlight: "Mí",
-      description: "Soy Nahuel Sanchez, un creativo multidisciplinario de Misiones en constante evolución. Combino la precisión técnica de la informática con la perspectiva artística de la fotografía. Siempre esforzándome por crear proyectos que no solo funcionen, sino que trasciendan.",
+      description: "Soy Nahuel Sanchez, un creativo multidisciplinario de Misiones en constante evolución. Combino la precisión técnica de la informática con la perspectiva artística de la fotografía. Siempre esforzándome por crear proyectos que no solo funcionen, sino que sean visualmente atractivos.",
       skills: [
         {
           title: "Desarrollo Web",
-          description: "Desarrollo con React, WordPress, entre otras tecnologías. Buscando siempre un código riguroso y eficiente."
+          description: "Desarrollo con React, PHP, WordPress, entre otras tecnologías. Buscando siempre un código riguroso y estructurado."
         },
         {
           title: "Automatización",
-          description: "Transformo tareas manuales en procesos autónomos eficientes mediante scripting de automatización usando Python."
+          description: "Utilizo scripting de automatización Python para transformar tareas manuales en procesos autónomos eficientes."
         },
         {
           title: "Fotografía & Diseño",
@@ -32,8 +40,8 @@ export const translations = {
       repo: "REPOSITORIO",
       items: {
         corchazo: {
-          title: "Corchazo Sitio de Banda",
-          description: "Web oficial de la banda de hard rock. Todo el contenido fotográfico es de mi autoría."
+          title: "Sitio de la Banda Corchazo",
+          description: "Web oficial de la banda de hard rock. Contenido fotográfico de mi autoría."
         },
         inBloom: {
           title: "In Bloom E-Commerce",
@@ -49,6 +57,21 @@ export const translations = {
         }
       }
     },
+    photography: {
+      title: "Perspectiva ",
+      titleHighlight: "Visual",
+      subtitle: "Éste es un resumen conciso de mi trayectoria en la fotografía. ¡Espero que lo disfrutes!",
+      viewGallery: "Ver Galería",
+      categories: {
+        Naturaleza: "Naturaleza",
+        Urbano: "Urbano",
+        Paisaje: "Paisaje",
+        Eventos: "Eventos",
+        Arquitectura: "Arquitectura",
+        Animales: "Animales",
+        Libre: "Libre"
+      }
+    },    
     contact: {
       title: "Contacto",
       subtitle: "¿Tenés algún proyecto en mente o buscás colaborar? Me gustaría saber de vos.",
@@ -63,25 +86,11 @@ export const translations = {
       sendButton: "Enviar Mensaje"
     }, 
     footer: {
-      text: "Diseñado y desarrollado con pasión desde Misiones, Argentina.",
+      text: "Diseñado y desarrollado con dedicación desde Misiones, Argentina.",
       rights: "Todos los derechos reservados.",
       linksTitle: "Navegación"
     },
-    hero: {
-      titlePart1: "Desarrollador",
-      titlePart2: "Web ",
-      titlePart3: "Fotógrafo",
-      // NUEVO TEXTO:
-      subtitle: "Transformando ideas complejas en interfaces simples, funcionales y visualmente potentes.",
-      btnProjects: "Ver Proyectos",
-      btnContact: "Contactar"
-    },
-    photography: {
-      title: "Perspectiva ",
-      titleHighlight: "Visual",
-      subtitle: "Las imágenes son herramientas de comunicación poderosas, y capturar la realidad a través de mi lente es lo que define mi voz como fotógrafo. Éste es un resumen conciso de lo que me gustaría expresar. ¡Espero que lo disfrutes!",
-      viewGallery: "Ver Galería"
-    }
+
   },
   en: {
     nav: {
@@ -90,19 +99,27 @@ export const translations = {
       projects: "Projects",
       photography: "Photography",
       contact: "Contact"
+    },    
+    hero: {
+      titlePart1: "Web",
+      titlePart2: "Developer",
+      titlePart3: "Photographer",
+      subtitle: "Transforming complex ideas into simple, functional, and visually powerful interfaces.",
+      btnProjects: "View Projects",
+      btnContact: "Contact Me"
     },
     about: {
       title: "About ",
       titleHighlight: "Me",
-      description: "I am Nahuel Sanchez, a multidisciplinary creative from Misiones. I combine the technical precision of computing with the artistic perspective of photography. Always striving to create projects that not only function but transcend.",
+      description: "I am Nahuel Sanchez, a multidisciplinary creative from Misiones. I combine the technical precision of computing with the artistic perspective of photography. Always striving to create projects that not only work but are visually appealing.",
       skills: [
         {
           title: "Web Development",
-          description: "Development using React, WordPress, among other technologies. Always striving for rigorous and efficient code."
+          description: "Development using React, PHP, WordPress, among other technologies. Always striving for rigorous and efficient code."
         },
         {
           title: "Automation",
-          description: "I transform manual tasks into autonomous processes through automation scripting using Python."
+          description: "I utilize Python scripting to transform manual tasks into autonomous processes."
         },
         {
           title: "Photography & Design",
@@ -117,7 +134,7 @@ export const translations = {
       items: {
         corchazo: {
           title: "Corchazo Band Site",
-          description: "Official hard rock band website. All photographic content is my own work."
+          description: "Official hard rock band website. Photographic content of my own creation."
         },
         inBloom: {
           title: "In Bloom E-Commerce",
@@ -128,9 +145,24 @@ export const translations = {
           description: "Women's clothing and perfumery store integrated with a management panel."
         },
         python: {
-          title: "Massive Automated Catalog",
-          description: "ExtendScript and Python scripting for automated typesetting of massive catalogs (500+ products) for Distribuidora Mauri."
+          title: "Automated Catalog",
+          description: "Management and visualization of massive inventory."
         }
+      }
+    },    
+    photography: {
+      title: "Visual ",
+      titleHighlight: "Perspective",
+      subtitle: "This is a concise summary of my trayectory in photography. I hope you enjoy it!",
+      viewGallery: "View Gallery",
+      categories: {
+        Naturaleza: "Nature",
+        Urbano: "Urban",
+        Paisaje: "Landscape",
+        Eventos: "Events",
+        Arquitectura: "Architecture",
+        Animales: "Animals",
+        Libre: "Personal"
       }
     },
     contact: {
@@ -147,25 +179,9 @@ export const translations = {
       sendButton: "Send Message"
     },
     footer: {
-      text: "Designed and developed with passion from Misiones, Argentina.",
+      text: "Designed and developed with dedication from Misiones, Argentina.",
       rights: "All rights reserved.",
       linksTitle: "Navigation"
     },
-    hero: {
-      titlePart1: "Web",
-      titlePart2: "Developer",
-      titlePart3: "Photographer",
-      // NUEVO TEXTO:
-      subtitle: "Transforming complex ideas into simple, functional, and visually powerful interfaces.",
-      btnProjects: "View Projects",
-      btnContact: "Contact Me"
-    },
-    photography: {
-      title: "Visual ",
-      titleHighlight: "Perspective",
-      subtitle: "Images are powerful communication tools, and capturing reality through my lens is what defines my voice as a photographer. This is a concise summary of what I'd like to express. I hope you enjoy it!",
-      viewGallery: "View Gallery"
-    }
-
   }
 };

@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect, Suspense } from "react";
+import { useRef, useState, useEffect, Suspense, useMemo } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useTexture } from "@react-three/drei";
 import * as THREE from "three";
@@ -7,7 +7,9 @@ import { motion, type Variants } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 import { translations } from "../../data/translations";
 
-const LiquidShaderMaterial = {
+// 1. SACAMOS LA CONFIGURACIÓN AFUERA
+// Esto evita que el shader se compile de nuevo en cada render.
+const shaderConfig = {
   uniforms: {
     uTime: { value: 0 },
     uMouse: { value: new THREE.Vector2(0, 0) },
@@ -32,11 +34,20 @@ const LiquidShaderMaterial = {
 
     void main() {
       vec2 uv = vUv;
-      float dist = distance(uv, uMouse);
-      float wave = sin(dist * 10.0 - uTime * 1.5);
-      float strength = smoothstep(0.4, 0.0, dist) * uHover * 0.04;
       
-      uv += wave * strength;
+      // 1. Efecto Reactivo (Sigue al mouse)
+      float distMouse = distance(uv, uMouse);
+      float waveMouse = sin(distMouse * 10.0 - uTime * 1.5);
+      float strengthMouse = smoothstep(0.4, 0.0, distMouse) * uHover * 0.04;
+
+      // 2. Efecto Idle (Fijo en la derecha cuando no hay hover)
+      vec2 focusPoint = vec2(0.5, 0.5); 
+      float distIdle = distance(uv, focusPoint);
+      float waveIdle = sin(distIdle * 8.0 - uTime * 1.0);
+      float strengthIdle = smoothstep(0.6, 0.0, distIdle) * (1.0 - uHover) * 0.012;
+
+      uv += (waveMouse * strengthMouse) + (waveIdle * strengthIdle);
+
       vec4 textureColor = texture2D(uTexture, uv);
       gl_FragColor = vec4(textureColor.rgb, textureColor.a * uOpacity);
     }
@@ -47,24 +58,39 @@ function Scene({ imagePath }: { imagePath: string }) {
   const meshRef = useRef<THREE.Mesh>(null);
   const texture = useTexture(imagePath);
   const { viewport } = useThree();
-  const [hovered, setHover] = useState(false);
+  
+  // Usamos un ref para el valor de hover para evitar re-renders de React
+  const hoverValue = useRef(0);
+
+  // 2. MEMORIZAMOS EL MATERIAL
+  // Esto asegura que el objeto del material sea siempre el mismo.
+  const material = useMemo(() => {
+    const mat = new THREE.ShaderMaterial(shaderConfig);
+    mat.uniforms.uTexture.value = texture;
+    mat.transparent = true;
+    return mat;
+  }, [texture]);
 
   useFrame((state) => {
     if (!meshRef.current) return;
-    const material = meshRef.current.material as THREE.ShaderMaterial;
+    const mat = meshRef.current.material as THREE.ShaderMaterial;
 
-    material.uniforms.uTime.value = state.clock.getElapsedTime();
-    material.uniforms.uMouse.value.lerp(
+    mat.uniforms.uTime.value = state.clock.getElapsedTime();
+
+    // Lógica de detección de posición
+    const isMouseOnRight = state.mouse.x > 0.5;
+    
+    // Lerp suave para el hover sin disparar un useState
+    hoverValue.current = THREE.MathUtils.lerp(hoverValue.current, isMouseOnRight ? 1 : 0, 0.05);
+    mat.uniforms.uHover.value = hoverValue.current;
+
+    mat.uniforms.uMouse.value.lerp(
       new THREE.Vector2((state.mouse.x + 1) / 2, (state.mouse.y + 1) / 2),
       0.1
     );
-    material.uniforms.uHover.value = THREE.MathUtils.lerp(
-      material.uniforms.uHover.value,
-      hovered ? 1 : 0,
-      0.05
-    );
-    material.uniforms.uOpacity.value = THREE.MathUtils.lerp(
-      material.uniforms.uOpacity.value,
+    
+    mat.uniforms.uOpacity.value = THREE.MathUtils.lerp(
+      mat.uniforms.uOpacity.value,
       1,
       0.02
     );
@@ -81,22 +107,16 @@ function Scene({ imagePath }: { imagePath: string }) {
   }
 
   return (
-    <mesh
-      ref={meshRef}
-      onPointerOver={() => setHover(true)}
-      onPointerOut={() => setHover(false)}
-    >
+    <mesh ref={meshRef}>
       <planeGeometry args={[width, height]} />
-      <shaderMaterial
-        args={[LiquidShaderMaterial]}
-        uniforms-uTexture-value={texture}
-        transparent={true}
-      />
+      {/* 3. PASAMOS EL MATERIAL MEMORIZADO */}
+      <primitive object={material} attach="material" />
     </mesh>
   );
 }
 
 export function LiquidHero() {
+  // ... (el resto del componente LiquidHero se queda igual que lo tenías)
   const { lang } = useLanguage();
   const t = translations[lang as keyof typeof translations].hero;
   const [isMobile, setIsMobile] = useState(false);
