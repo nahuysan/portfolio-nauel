@@ -72,6 +72,42 @@
         "orientation": "portrait"
     },
     {
+        "webp": "/photography/Animales/23.webp",
+        "original": "/photography/Animales/23.webp",
+        "category": "Animales",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Animales/24.webp",
+        "original": "/photography/Animales/24.webp",
+        "category": "Animales",
+        "orientation": "landscape"
+    },
+    {
+        "webp": "/photography/Animales/25.webp",
+        "original": "/photography/Animales/25.webp",
+        "category": "Animales",
+        "orientation": "landscape"
+    },
+    {
+        "webp": "/photography/Animales/26.webp",
+        "original": "/photography/Animales/26.webp",
+        "category": "Animales",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Animales/27.webp",
+        "original": "/photography/Animales/27.webp",
+        "category": "Animales",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Animales/28.webp",
+        "original": "/photography/Animales/28.webp",
+        "category": "Animales",
+        "orientation": "portrait"
+    },
+    {
         "webp": "/photography/Animales/3.webp",
         "original": "/photography/Animales/3.webp",
         "category": "Animales",
@@ -138,26 +174,20 @@
         "orientation": "landscape"
     },
     {
-        "webp": "/photography/Arquitectura/13.webp",
-        "original": "/photography/Arquitectura/13.webp",
-        "category": "Arquitectura",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Arquitectura/14.webp",
-        "original": "/photography/Arquitectura/14.webp",
-        "category": "Arquitectura",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Arquitectura/15.webp",
-        "original": "/photography/Arquitectura/15.webp",
-        "category": "Arquitectura",
-        "orientation": "landscape"
-    },
-    {
         "webp": "/photography/Arquitectura/16.webp",
         "original": "/photography/Arquitectura/16.webp",
+        "category": "Arquitectura",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Arquitectura/17.webp",
+        "original": "/photography/Arquitectura/17.webp",
+        "category": "Arquitectura",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Arquitectura/18.webp",
+        "original": "/photography/Arquitectura/18.webp",
         "category": "Arquitectura",
         "orientation": "portrait"
     },
@@ -240,20 +270,8 @@
         "orientation": "portrait"
     },
     {
-        "webp": "/photography/Eventos/14.webp",
-        "original": "/photography/Eventos/14.webp",
-        "category": "Eventos",
-        "orientation": "portrait"
-    },
-    {
         "webp": "/photography/Eventos/15.webp",
         "original": "/photography/Eventos/15.webp",
-        "category": "Eventos",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Eventos/16.webp",
-        "original": "/photography/Eventos/16.webp",
         "category": "Eventos",
         "orientation": "portrait"
     },
@@ -296,12 +314,6 @@
     {
         "webp": "/photography/Eventos/22.webp",
         "original": "/photography/Eventos/22.webp",
-        "category": "Eventos",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Eventos/23.webp",
-        "original": "/photography/Eventos/23.webp",
         "category": "Eventos",
         "orientation": "portrait"
     },
@@ -387,13 +399,73 @@
         "webp": "/photography/Eventos/36.webp",
         "original": "/photography/Eventos/36.webp",
         "category": "Eventos",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Eventos/37.webp",
+        "original": "/photography/Eventos/37.webp",
+        "category": "Eventos",
         "orientation": "landscape"
+    },
+    {
+        "webp": "/photography/Eventos/38.webp",
+        "original": "/photography/Eventos/38.webp",
+        "category": "Eventos",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Eventos/39.webp",
+        "original": "/photography/Eventos/39.webp",
+        "category": "Eventos",
+        "orientation": "portrait"
     },
     {
         "webp": "/photography/Eventos/4.webp",
         "original": "/photography/Eventos/4.webp",
         "category": "Eventos",
         "orientation": "landscape"
+    },
+    {
+        "webp": "/photography/Eventos/40.webp",
+        "original": "/photography/Eventos/40.webp",
+        "category": "Eventos",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Eventos/41.webp",
+        "original": "/photography/Eventos/41.webp",
+        "category": "Eventos",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Eventos/42.webp",
+        "original": "/photography/Eventos/42.webp",
+        "category": "Eventos",
+        "orientation": "landscape"
+    },
+    {
+        "webp": "/photography/Eventos/43.webp",
+        "original": "/photography/Eventos/43.webp",
+        "category": "Eventos",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Eventos/44.webp",
+        "original": "/photography/Eventos/44.webp",
+        "category": "Eventos",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Eventos/45.webp",
+        "original": "/photography/Eventos/45.webp",
+        "category": "Eventos",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Eventos/46.webp",
+        "original": "/photography/Eventos/46.webp",
+        "category": "Eventos",
+        "orientation": "portrait"
     },
     {
         "webp": "/photography/Eventos/5.webp",
@@ -498,6 +570,36 @@
         "orientation": "portrait"
     },
     {
+        "webp": "/photography/Libre/20.webp",
+        "original": "/photography/Libre/20.webp",
+        "category": "Libre",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Libre/21.webp",
+        "original": "/photography/Libre/21.webp",
+        "category": "Libre",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Libre/22.webp",
+        "original": "/photography/Libre/22.webp",
+        "category": "Libre",
+        "orientation": "landscape"
+    },
+    {
+        "webp": "/photography/Libre/23.webp",
+        "original": "/photography/Libre/23.webp",
+        "category": "Libre",
+        "orientation": "landscape"
+    },
+    {
+        "webp": "/photography/Libre/24.webp",
+        "original": "/photography/Libre/24.webp",
+        "category": "Libre",
+        "orientation": "portrait"
+    },
+    {
         "webp": "/photography/Libre/3.webp",
         "original": "/photography/Libre/3.webp",
         "category": "Libre",
@@ -594,6 +696,12 @@
         "orientation": "portrait"
     },
     {
+        "webp": "/photography/Naturaleza/18.webp",
+        "original": "/photography/Naturaleza/18.webp",
+        "category": "Naturaleza",
+        "orientation": "portrait"
+    },
+    {
         "webp": "/photography/Naturaleza/2.webp",
         "original": "/photography/Naturaleza/2.webp",
         "category": "Naturaleza",
@@ -672,12 +780,6 @@
         "orientation": "landscape"
     },
     {
-        "webp": "/photography/Paisaje/15.webp",
-        "original": "/photography/Paisaje/15.webp",
-        "category": "Paisaje",
-        "orientation": "landscape"
-    },
-    {
         "webp": "/photography/Paisaje/16.webp",
         "original": "/photography/Paisaje/16.webp",
         "category": "Paisaje",
@@ -718,6 +820,18 @@
         "original": "/photography/Paisaje/21.webp",
         "category": "Paisaje",
         "orientation": "landscape"
+    },
+    {
+        "webp": "/photography/Paisaje/22.webp",
+        "original": "/photography/Paisaje/22.webp",
+        "category": "Paisaje",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Paisaje/23.webp",
+        "original": "/photography/Paisaje/23.webp",
+        "category": "Paisaje",
+        "orientation": "portrait"
     },
     {
         "webp": "/photography/Paisaje/3.webp",
@@ -762,18 +876,6 @@
         "orientation": "portrait"
     },
     {
-        "webp": "/photography/Paisaje/IMG_0061.webp",
-        "original": "/photography/Paisaje/IMG_0061.webp",
-        "category": "Paisaje",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Paisaje/IMG_6426.webp",
-        "original": "/photography/Paisaje/IMG_6426.jpg",
-        "category": "Paisaje",
-        "orientation": "landscape"
-    },
-    {
         "webp": "/photography/Urbano/1.webp",
         "original": "/photography/Urbano/1.webp",
         "category": "Urbano",
@@ -804,30 +906,6 @@
         "orientation": "portrait"
     },
     {
-        "webp": "/photography/Urbano/14.webp",
-        "original": "/photography/Urbano/14.webp",
-        "category": "Urbano",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Urbano/15.webp",
-        "original": "/photography/Urbano/15.webp",
-        "category": "Urbano",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Urbano/16.webp",
-        "original": "/photography/Urbano/16.webp",
-        "category": "Urbano",
-        "orientation": "landscape"
-    },
-    {
-        "webp": "/photography/Urbano/17.webp",
-        "original": "/photography/Urbano/17.webp",
-        "category": "Urbano",
-        "orientation": "portrait"
-    },
-    {
         "webp": "/photography/Urbano/18.webp",
         "original": "/photography/Urbano/18.webp",
         "category": "Urbano",
@@ -852,20 +930,8 @@
         "orientation": "portrait"
     },
     {
-        "webp": "/photography/Urbano/21.webp",
-        "original": "/photography/Urbano/21.webp",
-        "category": "Urbano",
-        "orientation": "portrait"
-    },
-    {
         "webp": "/photography/Urbano/22.webp",
         "original": "/photography/Urbano/22.webp",
-        "category": "Urbano",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Urbano/23.webp",
-        "original": "/photography/Urbano/23.webp",
         "category": "Urbano",
         "orientation": "portrait"
     },
@@ -900,8 +966,68 @@
         "orientation": "landscape"
     },
     {
+        "webp": "/photography/Urbano/29.webp",
+        "original": "/photography/Urbano/29.webp",
+        "category": "Urbano",
+        "orientation": "portrait"
+    },
+    {
         "webp": "/photography/Urbano/3.webp",
         "original": "/photography/Urbano/3.webp",
+        "category": "Urbano",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Urbano/30.webp",
+        "original": "/photography/Urbano/30.webp",
+        "category": "Urbano",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Urbano/31.webp",
+        "original": "/photography/Urbano/31.webp",
+        "category": "Urbano",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Urbano/32.webp",
+        "original": "/photography/Urbano/32.webp",
+        "category": "Urbano",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Urbano/33.webp",
+        "original": "/photography/Urbano/33.webp",
+        "category": "Urbano",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Urbano/34.webp",
+        "original": "/photography/Urbano/34.webp",
+        "category": "Urbano",
+        "orientation": "landscape"
+    },
+    {
+        "webp": "/photography/Urbano/35.webp",
+        "original": "/photography/Urbano/35.webp",
+        "category": "Urbano",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Urbano/36.webp",
+        "original": "/photography/Urbano/36.webp",
+        "category": "Urbano",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Urbano/37.webp",
+        "original": "/photography/Urbano/37.webp",
+        "category": "Urbano",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Urbano/38.webp",
+        "original": "/photography/Urbano/38.webp",
         "category": "Urbano",
         "orientation": "portrait"
     },
@@ -938,24 +1064,6 @@
     {
         "webp": "/photography/Urbano/9.webp",
         "original": "/photography/Urbano/9.webp",
-        "category": "Urbano",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Urbano/IMG_7846.webp",
-        "original": "/photography/Urbano/IMG_7846.jpg",
-        "category": "Urbano",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Urbano/IMG_7862.webp",
-        "original": "/photography/Urbano/IMG_7862.jpg",
-        "category": "Urbano",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Urbano/IMG_7878.webp",
-        "original": "/photography/Urbano/IMG_7878.jpg",
         "category": "Urbano",
         "orientation": "portrait"
     }
