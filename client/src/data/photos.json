@@ -1,155 +1,5 @@
 [
     {
-        "webp": "/photography/Animales/1.webp",
-        "original": "/photography/Animales/1.webp",
-        "category": "Animales",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Animales/10.webp",
-        "original": "/photography/Animales/10.webp",
-        "category": "Animales",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Animales/11.webp",
-        "original": "/photography/Animales/11.webp",
-        "category": "Animales",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Animales/13.webp",
-        "original": "/photography/Animales/13.webp",
-        "category": "Animales",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Animales/14.webp",
-        "original": "/photography/Animales/14.webp",
-        "category": "Animales",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Animales/15.webp",
-        "original": "/photography/Animales/15.webp",
-        "category": "Animales",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Animales/16.webp",
-        "original": "/photography/Animales/16.webp",
-        "category": "Animales",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Animales/19.webp",
-        "original": "/photography/Animales/19.webp",
-        "category": "Animales",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Animales/2.webp",
-        "original": "/photography/Animales/2.webp",
-        "category": "Animales",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Animales/20.webp",
-        "original": "/photography/Animales/20.webp",
-        "category": "Animales",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Animales/21.webp",
-        "original": "/photography/Animales/21.webp",
-        "category": "Animales",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Animales/22.webp",
-        "original": "/photography/Animales/22.webp",
-        "category": "Animales",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Animales/23.webp",
-        "original": "/photography/Animales/23.webp",
-        "category": "Animales",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Animales/24.webp",
-        "original": "/photography/Animales/24.webp",
-        "category": "Animales",
-        "orientation": "landscape"
-    },
-    {
-        "webp": "/photography/Animales/25.webp",
-        "original": "/photography/Animales/25.webp",
-        "category": "Animales",
-        "orientation": "landscape"
-    },
-    {
-        "webp": "/photography/Animales/26.webp",
-        "original": "/photography/Animales/26.webp",
-        "category": "Animales",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Animales/27.webp",
-        "original": "/photography/Animales/27.webp",
-        "category": "Animales",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Animales/28.webp",
-        "original": "/photography/Animales/28.webp",
-        "category": "Animales",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Animales/3.webp",
-        "original": "/photography/Animales/3.webp",
-        "category": "Animales",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Animales/4.webp",
-        "original": "/photography/Animales/4.webp",
-        "category": "Animales",
-        "orientation": "landscape"
-    },
-    {
-        "webp": "/photography/Animales/5.webp",
-        "original": "/photography/Animales/5.webp",
-        "category": "Animales",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Animales/6.webp",
-        "original": "/photography/Animales/6.webp",
-        "category": "Animales",
-        "orientation": "landscape"
-    },
-    {
-        "webp": "/photography/Animales/7.webp",
-        "original": "/photography/Animales/7.webp",
-        "category": "Animales",
-        "orientation": "landscape"
-    },
-    {
-        "webp": "/photography/Animales/8.webp",
-        "original": "/photography/Animales/8.webp",
-        "category": "Animales",
-        "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Animales/9.webp",
-        "original": "/photography/Animales/9.webp",
-        "category": "Animales",
-        "orientation": "portrait"
-    },
-    {
         "webp": "/photography/Arquitectura/1.webp",
         "original": "/photography/Arquitectura/1.webp",
         "category": "Arquitectura",
@@ -657,7 +507,7 @@
         "webp": "/photography/Naturaleza/11.webp",
         "original": "/photography/Naturaleza/11.webp",
         "category": "Naturaleza",
-        "orientation": "landscape"
+        "orientation": "portrait"
     },
     {
         "webp": "/photography/Naturaleza/12.webp",
@@ -702,8 +552,68 @@
         "orientation": "portrait"
     },
     {
+        "webp": "/photography/Naturaleza/19.webp",
+        "original": "/photography/Naturaleza/19.webp",
+        "category": "Naturaleza",
+        "orientation": "portrait"
+    },
+    {
         "webp": "/photography/Naturaleza/2.webp",
         "original": "/photography/Naturaleza/2.webp",
+        "category": "Naturaleza",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Naturaleza/20.webp",
+        "original": "/photography/Naturaleza/20.webp",
+        "category": "Naturaleza",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Naturaleza/21.webp",
+        "original": "/photography/Naturaleza/21.webp",
+        "category": "Naturaleza",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Naturaleza/22.webp",
+        "original": "/photography/Naturaleza/22.webp",
+        "category": "Naturaleza",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Naturaleza/23.webp",
+        "original": "/photography/Naturaleza/23.webp",
+        "category": "Naturaleza",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Naturaleza/24.webp",
+        "original": "/photography/Naturaleza/24.webp",
+        "category": "Naturaleza",
+        "orientation": "landscape"
+    },
+    {
+        "webp": "/photography/Naturaleza/25.webp",
+        "original": "/photography/Naturaleza/25.webp",
+        "category": "Naturaleza",
+        "orientation": "landscape"
+    },
+    {
+        "webp": "/photography/Naturaleza/26.webp",
+        "original": "/photography/Naturaleza/26.webp",
+        "category": "Naturaleza",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Naturaleza/27.webp",
+        "original": "/photography/Naturaleza/27.webp",
+        "category": "Naturaleza",
+        "orientation": "portrait"
+    },
+    {
+        "webp": "/photography/Naturaleza/28.webp",
+        "original": "/photography/Naturaleza/28.webp",
         "category": "Naturaleza",
         "orientation": "portrait"
     },
@@ -717,7 +627,7 @@
         "webp": "/photography/Naturaleza/4.webp",
         "original": "/photography/Naturaleza/4.webp",
         "category": "Naturaleza",
-        "orientation": "portrait"
+        "orientation": "landscape"
     },
     {
         "webp": "/photography/Naturaleza/5.webp",
@@ -735,7 +645,7 @@
         "webp": "/photography/Naturaleza/7.webp",
         "original": "/photography/Naturaleza/7.webp",
         "category": "Naturaleza",
-        "orientation": "portrait"
+        "orientation": "landscape"
     },
     {
         "webp": "/photography/Naturaleza/8.webp",
@@ -879,13 +789,13 @@
         "webp": "/photography/Urbano/1.webp",
         "original": "/photography/Urbano/1.webp",
         "category": "Urbano",
-        "orientation": "portrait"
+        "orientation": "landscape"
     },
     {
         "webp": "/photography/Urbano/10.webp",
         "original": "/photography/Urbano/10.webp",
         "category": "Urbano",
-        "orientation": "landscape"
+        "orientation": "portrait"
     },
     {
         "webp": "/photography/Urbano/11.webp",
@@ -1000,12 +910,6 @@
         "original": "/photography/Urbano/33.webp",
         "category": "Urbano",
         "orientation": "portrait"
-    },
-    {
-        "webp": "/photography/Urbano/34.webp",
-        "original": "/photography/Urbano/34.webp",
-        "category": "Urbano",
-        "orientation": "landscape"
     },
     {
         "webp": "/photography/Urbano/35.webp",

@@ -63,7 +63,7 @@ export const translations = {
       subtitle: "Éste es un resumen conciso de mi trayectoria en la fotografía. ¡Espero que lo disfrutes!",
       viewGallery: "Ver Galería",
       categories: {
-        Naturaleza: "Naturaleza",
+        Naturaleza: "Naturaleza Y Vida Silvestre",
         Urbano: "Urbano",
         Paisaje: "Paisaje",
         Eventos: "Eventos",
@@ -156,7 +156,7 @@ export const translations = {
       subtitle: "This is a concise summary of my trayectory in photography. I hope you enjoy it!",
       viewGallery: "View Gallery",
       categories: {
-        Naturaleza: "Nature",
+        Naturaleza: "Nature and Wildlife",
         Urbano: "Urban",
         Paisaje: "Landscape",
         Eventos: "Events",
