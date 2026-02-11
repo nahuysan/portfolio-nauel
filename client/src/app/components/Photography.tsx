@@ -199,13 +199,15 @@ export function Photography() {
                 </button>
               </div>
               <div className="flex-1 overflow-y-auto pr-2 custom-scrollbar">
-<div className="grid grid-cols-2 md:grid-cols-4 gap-4 pb-20 auto-rows-fr">
+{/* 1. Agregamos grid-flow-dense al contenedor padre */}
+<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-20 grid-flow-dense">
   {shuffledCategoryPhotos.map((photo, i) => (
     <motion.div
       key={`${photo.webp}-${i}`}
       initial={{ opacity: 0, scale: 0.9 }} 
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: i * 0.02 }}
+      // 2. Reforzamos las proporciones para que encajen milimétricamente
       className={`relative overflow-hidden rounded-2xl bg-muted/20 border border-white/5 group cursor-zoom-in 
         ${photo.orientation === 'portrait' 
           ? 'col-span-1 aspect-[3/4]' 
@@ -217,7 +219,6 @@ export function Photography() {
       <ImageWithFallback 
         src={photo.webp} 
         alt={`${selectedCategory} - ${i}`} 
-        // object-cover es NO NEGOCIABLE acá para que no se estiren
         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
       />
       <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
