@@ -110,7 +110,7 @@ export function Photography() {
           >
             {t.title}<span className="text-primary text-glow">{t.titleHighlight}</span>
           </motion.h2>
-          <p className="text-[10px] md:text-lg text-muted-foreground italic max-w-2xl mx-auto opacity-70 leading-tight">
+          <p className="text-sm md:text-lg text-muted-foreground italic max-w-2xl mx-auto opacity-70 leading-tight">
             {t.subtitle}
           </p>
         </div>

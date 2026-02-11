@@ -51,7 +51,7 @@ export function Contact() {
           <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tighter">
             {t.title}<span className="text-primary">.</span>
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed italic">
+          <p className="text-sm md:text-lg text-muted-foreground leading-relaxed italic">
             {t.subtitle}
           </p>
         </div>
