@@ -9,10 +9,11 @@ export function Projects() {
 
   const projectList = [
     {
-      id: "inBloom",
-      image: "/projects/inbloom.png",
-      tags: ["WordPress", "WooCommerce", "PHP"],
-      link: "https://inbloomstore.com.ar",
+      id: "python", 
+      image: "/projects/mauri.png",
+      tags: ["React", "TypeScript", "Tailwind CSS"],
+      link: "https://dm-catalog.vercel.app/",
+      github: "https://github.com/NahuySan/dm-catalog",
       size: "lg:col-span-2 lg:row-span-2"
     },
     {
@@ -23,20 +24,19 @@ export function Projects() {
       size: "lg:col-span-2"
     },
     {
+      id: "inBloom",
+      image: "/projects/inbloom.png",
+      tags: ["WordPress", "WooCommerce", "PHP"],
+      link: "https://inbloomstore.com.ar",
+      size: "lg:col-span-1"
+    },
+    {
       id: "wappa",
       image: "/projects/wappa.png",
       tags: ["WordPress", "WooCommerce", "PHP"],
       link: "https://wapperia.com",
       size: "lg:col-span-1"
     },
-    {
-      id: "python", 
-      image: "/projects/mauri.png",
-      tags: ["React", "TypeScript", "Tailwind CSS"],
-      link: "https://dm-catalog.vercel.app/",
-      github: "https://github.com/NahuySan/dm-catalog",
-      size: "lg:col-span-1"
-    }
   ];
 
   return (
@@ -96,7 +96,7 @@ export function Projects() {
                     </div>
                   </div>
 
-                  <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
                     {itemT.title}
                   </h3>
                   <p className="text-sm text-muted-foreground mb-6 line-clamp-2 lg:group-hover:line-clamp-none transition-all">

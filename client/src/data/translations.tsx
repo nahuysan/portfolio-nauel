@@ -44,7 +44,7 @@ export const translations = {
           description: "Web oficial de la banda de hard rock. Contenido fotográfico de mi autoría."
         },
         inBloom: {
-          title: "In Bloom E-Commerce",
+          title: "InBloom e-commerce",
           description: "Indumentaria femenina integrada con MercadoPago."
         },
         wappa: {
