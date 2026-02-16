@@ -22,11 +22,11 @@ export const translations = {
       skills: [
         {
           title: "Desarrollo Web",
-          description: "Desarrollo con React, PHP, WordPress, entre otras tecnologías. Buscando siempre un código riguroso y estructurado."
+          description: "Construyo plataformas digitales robustas y escalables, buscando siempre un código limpio y estructurado para que cada sitio sea rápido, seguro y fácil de navegar."
         },
         {
           title: "Automatización",
-          description: "Utilizo scripting de automatización Python para transformar tareas manuales en procesos autónomos eficientes."
+          description: "Diseño sistemas que delegan tareas repetitivas a la tecnología. Me enfoco en optimizar los flujos de trabajo para ganar eficiencia y eliminar errores manuales."
         },
         {
           title: "Fotografía & Diseño",

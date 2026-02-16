@@ -1,4 +1,4 @@
-import { Menu, X, Languages } from "lucide-react";
+import { Menu, X, Languages, FileText } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { translations } from "../../data/translations";
@@ -56,6 +56,18 @@ export function Header() {
             </button>
           ))}
 
+          {/* Botón CV Desktop */}
+          <a
+            href={lang === 'es' ? '/cv-nahuel-es.pdf' : '/cv-nahuel-en.pdf'}
+            download
+            className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 hover:bg-primary/20 transition-all duration-300 group"
+          >
+            <FileText size={14} className="text-primary" />
+            <span className="text-[10px] font-bold tracking-widest text-foreground">
+              CV
+            </span>
+          </a>
+
           {/* Botón Idioma Desktop */}
           <button
             onClick={toggleLang}
@@ -107,6 +119,16 @@ export function Header() {
               {t[section as keyof typeof t]}
             </button>
           ))}
+
+          <a
+            href={lang === 'es' ? '/cv-nahuel-es.pdf' : '/cv-nahuel-en.pdf'}
+            download
+            className="flex items-center justify-between text-lg font-medium text-primary py-3 transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <span>{lang === 'es' ? 'Descargar CV' : 'Download CV'}</span>
+            <FileText size={20} />
+          </a>
         </div>
       </div>
     </header>
