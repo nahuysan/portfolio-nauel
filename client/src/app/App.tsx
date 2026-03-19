@@ -8,6 +8,8 @@ import { Projects } from "./components/Projects";
 import { Photography } from "./components/Photography";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 export default function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -26,6 +28,10 @@ export default function App() {
 
   return (
     <LanguageProvider>
+
+        <Analytics />
+        <SpeedInsights />
+
       <div className="size-full">
         <Header />
         <main>
